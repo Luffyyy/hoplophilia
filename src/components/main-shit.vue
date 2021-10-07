@@ -26,6 +26,9 @@
 	let gunName = ref('');
 	let gunId = computed(() => gunName.value.toLowerCase());
 
+	const parsedResult = computed(() => hljs.highlight(result.value, {language: 'xml'}).value);
+	const downloadResult = computed(() => 'data:text/plain;charset=utf-8,' + encodeURIComponent(result.value));
+
 	const result = computed(() => {
 return `<Items>
 	<Item name="${gunName.value} Bullet" identifier="${gunId.value}round" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
@@ -125,6 +128,4 @@ return `<Items>
 	</Item>
 </Items>`;
 	})
-	const parsedResult = computed(() => hljs.highlight(result.value, {language: 'xml'}).value);
-	const downloadResult = computed(() => 'data:text/plain;charset=utf-8,' + encodeURIComponent(result.value));
 </script>
