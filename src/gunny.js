@@ -3,7 +3,7 @@ export function assaultRifle(name, id) {
 	<!--${name}-->
 	<Item name="arround_generic" identifier="arround_generic" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
-		<Sprite texture="Content/Items/Weapons/weapons_new.png " sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
 		<Body width="40" height="14" density="40" />
 		<Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
 		<Projectile characterusable="false" hitscan="true" removeonhit="true">
